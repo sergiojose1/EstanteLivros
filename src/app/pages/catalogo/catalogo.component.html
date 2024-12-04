@@ -1,0 +1,36 @@
+<div class="suggestions-container">
+    <h1>Livros dos Autores Mais Pesquisados</h1>
+  
+    <!-- Indicador de carregamento -->
+    <div *ngIf="isLoading" class="loading">Carregando livros...</div>
+  
+    <!-- Exibe os livros por autor -->
+    <ng-container *ngFor="let author of authors">
+      <div *ngIf="booksByAuthor[author]?.length" class="author-section">
+        <h2>{{ author }}</h2>
+        <div class="books-grid">
+          <!-- Exibe os livros do autor -->
+          <div class="book-card" *ngFor="let book of booksByAuthor[author]">
+            <img
+              *ngIf="book.volumeInfo.imageLinks?.thumbnail"
+              [src]="book.volumeInfo.imageLinks.thumbnail"
+              alt="{{ book.volumeInfo.title }}"
+              class="book-cover"
+            />
+            <h3 class="book-title">
+              {{ book.volumeInfo.title | truncate : 30 }}
+            </h3>
+            <p class="book-description">
+              {{ book.volumeInfo.description | truncate : 100 }}
+            </p>
+  
+            <!-- Botão "Ver Detalhes" -->
+            <button class="details-button" [routerLink]="['/detalhes', book.id]">
+              Ver Detalhes
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  

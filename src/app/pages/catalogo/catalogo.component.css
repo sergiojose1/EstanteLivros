@@ -1,0 +1,97 @@
+/* Container Principal de Sugestões */
+.suggestions-container {
+    padding: 20px;
+    background-color: #141414;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Título das Sugestões */
+  .suggestions-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de Livros */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Estilo dos Livros */
+  .book-card {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 280px;
+    margin: auto;
+  }
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+  
+  .book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .book-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .book-authors,
+  .book-publisher,
+  .book-description {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  /* Botão "Ver Detalhes" */
+  .details-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .details-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Ajustes para títulos e descrições em telas menores */
+    .book-title {
+      font-size: 16px;
+    }
+  
+    .book-authors,
+    .book-publisher,
+    .book-description {
+      font-size: 12px;
+    }
+  
+    .details-button {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,70 @@
+
+* {
+  font-family: "Krona one", sans-serif;
+}
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: #141414;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sobre-container h1 {
+  text-shadow: 2px 4px 1px black;
+  font-size: 36px;
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+
+.sobre-container p {
+  font-family: "poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin-bottom: 15px;
+}
+
+[appHighlight] {
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste para tablets */
+@media (max-width: 768px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    }
+  }
+  
+  /* Ajuste para celulares */
+  @media (max-width: 480px) {
+    .container {
+      grid-template-columns: 1fr; /* Uma coluna */
+    }
+  }

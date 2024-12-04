@@ -1,0 +1,146 @@
+/* Definindo as cores principais do projeto */
+:root {
+    --primary-color: #4a90e2; /* Azul vibrante */
+    --secondary-color: #56d798; /* Verde claro */
+    --background-color: #f2f5f8; /* Cinza muito claro */
+    --text-color: #2c3e50; /* Azul escuro */
+    --button-background-color: #4a90e2; /* Azul vibrante */
+    --button-hover-color: #357abd; /* Azul escuro */
+    --card-shadow: rgba(0, 0, 0, 0.1); /* Sombras leves */
+  }
+  
+  /* Container principal */
+  .detalhes-livro-container {
+    padding: 40px;
+    background-color: var(--background-color); /* Fundo claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Card de detalhes */
+  .card-detalhes {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    grid-gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 20px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card-detalhes:hover {
+    transform: translateY(-5px); /* Eleva um pouco ao passar o mouse */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagem no canto superior esquerdo */
+  .book-cover {
+    max-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-right: 20px; /* Espaço ao lado direito da imagem */
+    height: auto;
+  }
+  
+  /* Texto e informações do livro */
+  .livro-detalhes {
+    font-family: 'Arial', sans-serif; /* Tipografia limpa e moderna */
+    color: var(--text-color);
+    overflow: hidden;
+  }
+  
+  .livro-detalhes h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Título na cor principal */
+  }
+  
+  .livro-detalhes p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0;
+    color: var(--text-color);
+  }
+  
+  /* Botão de voltar */
+  .voltar-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #007bff; /* Cor principal */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .voltar-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras no hover */
+  }
+  
+  /* Indicador de carregamento e mensagem de erro */
+  .loading,
+  .error-message {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Cor de texto */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Consultas de mídia para responsividade */
+  @media (max-width: 768px) {
+    .card-detalhes {
+      padding: 20px;
+    }
+  
+    .book-cover {
+      max-width: 120px;
+      margin-right: 15px;
+    }
+  
+    .livro-detalhes h2 {
+      font-size: 1.5rem;
+    }
+  
+    .voltar-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .detalhes-livro-container {
+      padding: 20px;
+    }
+  
+    .card-detalhes {
+      padding: 15px;
+    }
+  
+    .book-cover {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+  
+    .livro-detalhes h2 {
+      font-size: 1.2rem;
+    }
+  
+    .voltar-button {
+      padding: 8px 16px;
+      font-size: 0.8rem;
+    }
+  }
+  
